@@ -26,3 +26,4 @@ export class Navbar extends Component {
 
 export default Navbar
 //rce
+//npm run start
