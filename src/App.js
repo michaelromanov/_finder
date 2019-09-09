@@ -6,14 +6,16 @@ import './App.css';
 
 class App extends Component {
   state = {
-    users: [];
-    laoding: false;
+    users: [],
+    laoding: false
   }
 
   async componentDidMount(){
+    this.setState({ loading: true});
+
     const res = await axios.get('https://api.github.com/users');
 
-    console.log(res.data);
+    this.setState({ users: res.data, loading: false });
   }
 
   render() {
