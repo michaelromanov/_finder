@@ -11,7 +11,7 @@ const Users = ( {users, loading} ) => {
           {users.map(user => (
             <UserItem key={user.id} user={user} />
           ))}
-        </div>   
+        </div>    
       );
     }
 
